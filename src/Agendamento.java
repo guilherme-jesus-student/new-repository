@@ -5,7 +5,7 @@ public class Agendamento {
     private Servico servico;
     private String horario;
 
-    public String getHorario() {
+    public String getHorario() {//getHora servindo para retorna o valor do horario
         return horario;
     }
 
@@ -23,3 +23,8 @@ public class Agendamento {
         System.out.println("Horário: " + horario);
     }
 }
+
+//A classe Agendamento representa um horário marcado no sistema.
+// Ela possui atributos que armazenam o cliente, o profissional, o serviço e o horário.
+// Esses atributos são privados para garantir encapsulamento.
+// A classe possui um construtor para inicializar os dados e um método que exibe as informações do agendamento."

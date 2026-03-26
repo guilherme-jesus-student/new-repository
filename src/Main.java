@@ -22,12 +22,3 @@ public class Main {
 
         agenda.listarAgendamentos();
     }
-}
-
-//Cliente cliente2 = new Cliente("Ana", "117777777");
-//Profissional prof2 = new Profissional("Carlos", "116666666", "Cabeleireiro");
-//Servico servico2 = new Servico("Corte de cabelo", 50);
-//
-//Agendamento ag2 = new Agendamento(cliente2, prof2, servico2, "11:00");
-//
-//agenda.adicionarAgendamento(ag2);
