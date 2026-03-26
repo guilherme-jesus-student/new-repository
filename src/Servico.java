@@ -32,6 +32,6 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "Servico: " + nome + " | Preço: R$ " + preco;
+        return "Serviço: " + nome + " | Preço: R$ " + preco;
     }
 } // Teste Git Agora vai
