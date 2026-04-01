@@ -1,30 +1,43 @@
+import java.time.LocalDateTime;
+
 public class Agendamento {
 
     private Cliente cliente;
     private Profissional profissional;
     private Servico servico;
-    private String horario;
+    private LocalDateTime horario;
 
-    public String getHorario() {//getHora servindo para retorna o valor do horario
-        return horario;
-    }
-
-    public Agendamento(Cliente cliente, Profissional profissional, Servico servico, String horario){
+    public Agendamento(Cliente cliente, Profissional profissional, Servico servico, LocalDateTime horario) {
+        if (cliente == null || profissional == null || servico == null || horario == null) {
+            throw new IllegalArgumentException("Dados do agendamento não podem ser nulos");
+        }
         this.cliente = cliente;
         this.profissional = profissional;
         this.servico = servico;
         this.horario = horario;
     }
 
-    public void mostrarAgendamento(){
-        System.out.println("Cliente: " + cliente.getNome());
-        System.out.println("Profissional: " + profissional.getNome());
-        System.out.println("Serviço: " + servico.getNome());
-        System.out.println("Horário: " + horario);
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public Profissional getProfissional() {
+        return profissional;
+    }
+
+    public Servico getServico() {
+        return servico;
+    }
+
+    public LocalDateTime getHorario() {
+        return horario;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente: " + cliente.getNome() +
+                " | Profissional: " + profissional.getNome() +
+                " | Serviço: " + servico.getNome() +
+                " | Horário: " + horario;
     }
 }
-
-//A classe Agendamento representa um horário marcado no sistema.
-// Ela possui atributos que armazenam o cliente, o profissional, o serviço e o horário.
-// Esses atributos são privados para garantir encapsulamento.
-// A classe possui um construtor para inicializar os dados e um método que exibe as informações do agendamento."
